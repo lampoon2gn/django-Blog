@@ -2,8 +2,30 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+
+posts=[
+  {
+    'author':'cole',
+    'title':'this is title',
+    'content':'this is content',
+    'date_posted':'01/23/2020'
+  },
+  {
+    'author':'jin',
+    'title':'this is also title',
+    'content':'this is also content',
+    'date_posted':'04/05/2020'
+  },
+]
+
 def home(request):
-  return HttpResponse('<h1>Blog Home</h1>')
+  #gets list of dicts, pass to render()
+  #allow us to access data in the dicts in the templates
+  context = {
+    'posts':posts
+  }
+
+  return render(request,'blog/home.html',context)#string is the file path inside the template folder
 
 def about(request):
-  return HttpResponse('<h1>Blog About</h1>')
+  return render(request,'blog/about.html',{'title':'About'})
