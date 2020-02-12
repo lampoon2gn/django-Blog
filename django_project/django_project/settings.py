@@ -30,8 +30,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#register app here everytime a new app is created
+#create new app with "python manage.py startapp name_for_app"
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

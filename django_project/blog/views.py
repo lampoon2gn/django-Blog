@@ -4,20 +4,21 @@ from .models import Post #. means its in the package
 
 # Create your views here.
 
-posts=[
-  {
-    'author':'cole',
-    'title':'this is title',
-    'content':'this is content',
-    'date_posted':'01/23/2020'
-  },
-  {
-    'author':'jin',
-    'title':'this is also title',
-    'content':'this is also content',
-    'date_posted':'04/05/2020'
-  },
-]
+#-------------dummy data-------------
+# posts=[
+#   {
+#     'author':'cole',
+#     'title':'this is title',
+#     'content':'this is content',
+#     'date_posted':'01/23/2020'
+#   },
+#   {
+#     'author':'jin',
+#     'title':'this is also title',
+#     'content':'this is also content',
+#     'date_posted':'04/05/2020'
+#   },
+# ]
 
 def home(request):
   #gets list of dicts, pass to render()
