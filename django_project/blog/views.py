@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Post #. means its in the package
 
 # Create your views here.
 
@@ -22,7 +23,7 @@ def home(request):
   #gets list of dicts, pass to render()
   #allow us to access data in the dicts in the templates
   context = {
-    'posts':posts
+    'posts':Post.objects.all()
   }
 
   return render(request,'blog/home.html',context)#string is the file path inside the template folder
