@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 #register app here everytime a new app is created
 #create new app with "python manage.py startapp name_for_app"
 INSTALLED_APPS = [
+    'crispy_forms', #! CRISPY_TEMPLATE_PACK on line 126 defines booststrap version
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -122,3 +123,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
