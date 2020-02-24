@@ -24,7 +24,7 @@ def home(request):
   #gets list of dicts, pass to render()
   #allow us to access data in the dicts in the templates
   context = {
-    'posts':Post.objects.all()
+    'posts':Post.objects.all()#! ignore if linter complains
   }
 
   return render(request,'blog/home.html',context)#string is the file path inside the template folder
