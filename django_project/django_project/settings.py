@@ -123,8 +123,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')#! this is where uploaded media is stored, "media" folder within base directory of the project
+MEDIA_URL = '/media/'
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4' #! bootstrap version to use for crisp forms
 
 LOGIN_REDIRECT_URL = 'blog-home'#! redirect to blog after login
 
 LOGIN_URL = 'login'
+
