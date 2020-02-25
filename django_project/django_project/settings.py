@@ -123,4 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4' #! bootstrap version to use for crisp forms
+
+LOGIN_REDIRECT_URL = 'blog-home'#! redirect to blog after login
+
+LOGIN_URL = 'login'

@@ -1,0 +1,6 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %} <!--! use crispy forms here-->
+
+{% block content %}
+  <h1>{{ user.username }}</h1> <!--! user is built in with django represent the current logged in user-->
+{% endblock content %}
