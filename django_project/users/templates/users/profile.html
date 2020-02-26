@@ -10,6 +10,16 @@
         <p class="text-secondary">{{ user.email }}</p>
       </div>
     </div>
-    <!-- FORM HERE -->
+    <form method="POST" enctype="multipart/form-data"><!--! needed so image can be saved properly-->
+      {% csrf_token %} <!--for security, must have-->
+      <fieldset class="from-group">
+        <legend class="border-bottom mb-4">Profile Info</legend>
+        {{ u_form|crispy }} <!--! use vertical bar to apply filter to form-->
+        {{ p_form|crispy }}
+      </fieldset>
+      <div class="from-group">
+        <button class="btn btn-outline-info" type="submit">Update</button>
+      </div>
+    </form>
   </div>
 {% endblock content %}
