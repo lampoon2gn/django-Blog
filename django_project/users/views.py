@@ -4,6 +4,8 @@ from django.contrib import messages
 from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm #! form we created in forms.py, includes an email filed
 from django.contrib.auth.decorators import login_required #! decorator to declare view as logged in users only
 
+#from django.contrib.auth.models import User#! attempt to get user email
+
 # Create your views here.
 def register(request):
   if request.method == 'POST':#! if a POST request, fill the form with data in request
@@ -45,3 +47,10 @@ def profile(request):
   # message.success
   # message.warning
   # message.error
+
+# #!attempt to force log in before visiting password reset
+# @login_required #! decorator to declare view as logged in users only
+# def password_reset(request):
+#   if request.method == 'POST'
+#   entered_email = 
+#   logged_email = user.email

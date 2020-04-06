@@ -12,8 +12,8 @@ class Profile(models.Model):
   def __str__(self):
     return f'{self.user.username} Profile'
   
-  def save(self):
-    super().save() #! run save method of the parent class
+  def save(self,*args, **kawrgs): #! use args and kawrgs to pass param to parent 
+    super().save(args, **kawrgs) #! run save method of the parent class
 
     img = Image.open(self.image.path) #! use pillow to open the target image
     
