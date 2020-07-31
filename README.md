@@ -1,2 +1,2 @@
-# django-web-app
-Project for learning Django and web development.
+# django-Blog
+Blog web application written for learning Django and web development.
